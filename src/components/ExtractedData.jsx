@@ -59,8 +59,8 @@ const ExtractedData = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:8000/parse-resume', formData, {
-        headers: {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/parse-resume`, formData, {
+        headers: {  
           'Content-Type': 'multipart/form-data',
         },
       });

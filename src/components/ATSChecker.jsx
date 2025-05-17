@@ -470,7 +470,7 @@ const ATSChecker = () => {
     formData.append('pdf_doc', file)
 
     try {
-      const response = await fetch('http://localhost:8000/process', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/process`, {
         method: 'POST',
         body: formData,
       })
